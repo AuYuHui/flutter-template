@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_template/router/router_constants.dart';
+import 'package:flutter_template/screens/button/index.dart';
 import 'package:flutter_template/screens/home.dart';
 import 'package:go_router/go_router.dart';
 
@@ -18,7 +19,16 @@ class AppRouterConfig {
         path: RouterConstants.home,
         pageBuilder: (context, state) {
           return NoTransitionPage(
-            child: HomeScreen(),
+            child: const HomeScreen(),
+            key: state.pageKey,
+          );
+        },
+      ),
+      GoRoute(
+        path: RouterConstants.button,
+        pageBuilder: (context, state) {
+          return NoTransitionPage(
+            child: const ButtonScreen(),
             key: state.pageKey,
           );
         },

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_template/router/router_constants.dart';
 import 'package:forui/forui.dart';
+import 'package:go_router/go_router.dart';
 
 class Widgets extends StatelessWidget {
   Widgets({super.key});
@@ -37,8 +39,13 @@ class Widgets extends StatelessWidget {
           padding: EdgeInsets.only(
             bottom: 8.h,
           ),
-          child: FCard(
-            title: Text(_widgets[index]),
+          child: GestureDetector(
+            onTap: () {
+              context.push(RouterConstants.button);
+            },
+            child: FCard(
+              title: Text(_widgets[index]),
+            ),
           ),
         ),
       ),
