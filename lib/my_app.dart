@@ -22,8 +22,8 @@ class MyApp extends ConsumerWidget {
           builder: (context, child) {
             return FTheme(
                 data: settingState.isDarkMode
-                    ? FThemes.zinc.light
-                    : FThemes.zinc.dark,
+                    ? FThemes.zinc.dark
+                    : FThemes.zinc.light,
                 child: child!);
           },
           routerConfig: AppRouterConfig.instance.getGoRouter,

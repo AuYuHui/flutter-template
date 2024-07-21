@@ -24,7 +24,7 @@ class Settings extends ConsumerWidget {
                 const Text("Dark Mode"),
                 const Spacer(),
                 FSwitch(
-                  initialValue: true,
+                  initialValue: ref.watch(settingNotifierProvider).isDarkMode,
                   onChange: (value) {
                     ref.read(settingNotifierProvider.notifier).toggleDarkMode();
                   },
